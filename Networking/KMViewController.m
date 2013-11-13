@@ -7,6 +7,7 @@
 //
 
 #import "KMViewController.h"
+#import "KMWeatherData.h"
 
 @interface KMViewController ()
 
