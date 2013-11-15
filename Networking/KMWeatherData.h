@@ -10,6 +10,12 @@
 
 @interface KMWeatherData : NSObject
 
+@property (nonatomic, copy, readonly) NSURL *URL;
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSDecimalNumber *temp;
+@property (nonatomic, strong) NSString *description;
+
 - (KMWeatherData *) initWithDictionary:(NSDictionary *)dictionary;
 
 @end

@@ -10,4 +10,16 @@
 
 @implementation KMWeatherData
 
+- (KMWeatherData *)initWithDictionary:(NSDictionary *)dictionary{
+    self = [super init];
+    if (self) {
+        NSDictionary *weatherEntry = [[dictionary objectForKey: @"weather"] lastObject];
+
+        self.name = [weatherEntry objectForKey: @"name"];
+        self.temp = [weatherEntry valueForKeyPath: @"main.temp"];
+        self.description = [weatherEntry valueForKeyPath: @"weather.description"];
+    }
+    return self;
+}
+
 @end

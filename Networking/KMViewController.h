@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <JSONKit/JSONKit.h>
+#import "KMWeatherData.h"
 
 @interface KMViewController : UIViewController
+
+@property (nonatomic) IBOutlet UILabel *nameLabel;
+@property (nonatomic) IBOutlet UILabel *tempLabel;
+@property (nonatomic) IBOutlet UILabel *descriptionLabel;
+
+@property (nonatomic, strong) KMWeatherData *weatherData;
+
 
 @end
