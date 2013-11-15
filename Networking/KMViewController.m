@@ -48,18 +48,14 @@ didFinishDownloadingToURL:(NSURL *)location
     
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         
-        //KMWeatherData *weatherData = [[NSDictionary alloc] init];
         NSData *fileData = [NSData dataWithContentsOfURL: location];
+
+        NSDictionary *weatherDictionary = [fileData objectFromJSONData];
+        KMWeatherData *weatherWebData = [[KMWeatherData alloc] initWithDictionary: weatherDictionary];
         
-        KMWeatherData *weatherWebData = [fileData objectFromJSONData];
-        _weatherData = weatherWebData;
-        
-        NSDictionary *weatherEntry = [[ _weatherData valueForKeyPath: @"weather"] lastObject];
-        NSDictionary *mainEntry = [ _weatherData valueForKeyPath: @"main"] ;
-        
-        _nameLabel.text = [ _weatherData valueForKeyPath:@"name"];
-        _descriptionLabel.text = [ weatherEntry valueForKeyPath:@"description"];
-        _tempLabel.text = [NSString stringWithFormat:@"%@",[mainEntry objectForKey:@"temp"]];
+        _nameLabel.text = weatherWebData.name;
+        _descriptionLabel.text = weatherWebData.description;
+        _tempLabel.text = [weatherWebData.temp stringValue];
         
     }];
 }

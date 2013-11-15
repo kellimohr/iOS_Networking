@@ -15,9 +15,9 @@
     if (self) {
         NSDictionary *weatherEntry = [[dictionary objectForKey: @"weather"] lastObject];
 
-        self.name = [weatherEntry objectForKey: @"name"];
-        self.temp = [weatherEntry valueForKeyPath: @"main.temp"];
-        self.description = [weatherEntry valueForKeyPath: @"weather.description"];
+        self.name = [dictionary objectForKey: @"name"];
+        self.temp = [dictionary valueForKeyPath: @"main.temp"];
+        self.description = [weatherEntry valueForKeyPath: @"description"];
     }
     return self;
 }
