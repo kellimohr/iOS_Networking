@@ -16,6 +16,9 @@
 @property (nonatomic) IBOutlet UILabel *tempLabel;
 @property (nonatomic) IBOutlet UILabel *descriptionLabel;
 
+@property (nonatomic) IBOutlet UIButton *refreshButton;
+- (IBAction)refreshWeather:(id)sender;
+
 @property (nonatomic, strong) KMWeatherData *weatherData;
 
 

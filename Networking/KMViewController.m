@@ -20,6 +20,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    [self resetView];
+    
+}
+
+- (void)resetView
+{
+    [self.view setNeedsDisplay];
+    
     self.view.backgroundColor = [UIColor blackColor];
     
     
@@ -30,9 +44,19 @@
                                                      delegateQueue: nil];
     NSURL *downloadURL = [NSURL URLWithString: @"http://api.openweathermap.org/data/2.5/weather?q=Seattle,us"];
     
+    
     NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL: downloadURL];
     
     [downloadTask resume];
+}
+
+- (IBAction)refreshWeather:(id)sender
+{
+    //NSURLRequest* request = session.currentRequest;
+    //[self.session invalidateAndCancel];
+    
+    [self resetView];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +69,7 @@
 didFinishDownloadingToURL:(NSURL *)location
 {
     NSLog(@"URL Session did finish downloading URL: %@", location);
+    
     
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         

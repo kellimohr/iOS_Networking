@@ -23,6 +23,8 @@
 		A377160A183429E400C5515E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3771608183429E400C5515E /* InfoPlist.strings */; };
 		A377160C183429E400C5515E /* NetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A377160B183429E400C5515E /* NetworkingTests.m */; };
 		A377161718342D9300C5515E /* KMWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = A377161618342D9300C5515E /* KMWeatherData.m */; };
+		A3C1956C1835D23C007F8F44 /* KMFlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C1956B1835D23C007F8F44 /* KMFlickrViewController.m */; };
+		A3C1956F1835D387007F8F44 /* KMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C1956E1835D387007F8F44 /* KMPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		A377160B183429E400C5515E /* NetworkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingTests.m; sourceTree = "<group>"; };
 		A377161518342D9300C5515E /* KMWeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMWeatherData.h; path = Networking/KMWeatherData.h; sourceTree = "<group>"; };
 		A377161618342D9300C5515E /* KMWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMWeatherData.m; path = Networking/KMWeatherData.m; sourceTree = "<group>"; };
+		A3C1956A1835D23C007F8F44 /* KMFlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMFlickrViewController.h; sourceTree = "<group>"; };
+		A3C1956B1835D23C007F8F44 /* KMFlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMFlickrViewController.m; sourceTree = "<group>"; };
+		A3C1956D1835D387007F8F44 /* KMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPhoto.h; sourceTree = "<group>"; };
+		A3C1956E1835D387007F8F44 /* KMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,8 @@
 		A37715D4183429E400C5515E = {
 			isa = PBXGroup;
 			children = (
+				A3C1956D1835D387007F8F44 /* KMPhoto.h */,
+				A3C1956E1835D387007F8F44 /* KMPhoto.m */,
 				A377161518342D9300C5515E /* KMWeatherData.h */,
 				A377161618342D9300C5515E /* KMWeatherData.m */,
 				A37715E6183429E400C5515E /* Networking */,
@@ -130,6 +138,8 @@
 				A37715F6183429E400C5515E /* KMViewController.m */,
 				A37715F8183429E400C5515E /* Images.xcassets */,
 				A37715E7183429E400C5515E /* Supporting Files */,
+				A3C1956A1835D23C007F8F44 /* KMFlickrViewController.h */,
+				A3C1956B1835D23C007F8F44 /* KMFlickrViewController.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -296,7 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C1956F1835D387007F8F44 /* KMPhoto.m in Sources */,
 				A377161718342D9300C5515E /* KMWeatherData.m in Sources */,
+				A3C1956C1835D23C007F8F44 /* KMFlickrViewController.m in Sources */,
 				A37715F7183429E400C5515E /* KMViewController.m in Sources */,
 				A37715F1183429E400C5515E /* KMAppDelegate.m in Sources */,
 				A37715ED183429E400C5515E /* main.m in Sources */,
